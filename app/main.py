@@ -8,7 +8,7 @@ Run with: uvicorn app.main:app --reload
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
-from app.api.routes import assessments
+from app.api.routes import assessments, admin
 
 app = FastAPI(
     title="GCC Open Banking Underwriting API",
@@ -24,6 +24,7 @@ app = FastAPI(
 )
 
 app.include_router(assessments.router)
+app.include_router(admin.router)
 
 
 @app.get("/health", tags=["system"])
