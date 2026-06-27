@@ -1,4 +1,5 @@
 .env
+*.env
 __pycache__/
 *.pyc
 *.pyo
@@ -9,3 +10,4 @@ venv/
 dist/
 .DS_Store
 alembic/versions/*.py
+nginx/certs/
